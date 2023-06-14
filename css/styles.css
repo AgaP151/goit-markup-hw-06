@@ -928,13 +928,9 @@ form h3 {
   /* padding-left: 10px; */
   cursor: pointer;
 }
-.checkbox.statute-checkbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  left: 0px;
+.checkbox a {
+  text-decoration: underline;
+  color: var(--brand-color-blue);
 }
 .checkbox-vector {
   position: absolute;
@@ -949,9 +945,13 @@ form h3 {
   left: 0px;
   top: 5px;
 }
-.checkbox a {
-  text-decoration: underline;
-  color: var(--brand-color-blue);
+.statute-checkbox:checked ~ .checkbox-vector {
+  visibility: visible;
+  background-color: var(--brand-color-blue);
+  scale: 1;
+}
+.statute-checkbox:checked ~ .unchecked-vector {
+  scale: 0;
 }
 .unchecked-vector {
   max-width: 16px;
@@ -961,13 +961,23 @@ form h3 {
   left: 0px;
 }
 
-.statute-checkbox:checked ~ .checkbox-vector {
-  visibility: visible;
-  background-color: var(--brand-color-blue);
-  scale: 1;
-}
-.statute-checkbox:checked ~ .unchecked-vector {
-  scale: 0;
+/* .checkbox.statute-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  left: 0px;
+} */
+.statement {
+  margin-left: 8px;
+  max-width: 395px;
+  max-height: 24px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  /* justify-content: flex-end; */
 }
 
 .statute-checkbox {
@@ -980,17 +990,6 @@ form h3 {
   /* left: 0px; */
   border: 1px solid #000;
   /* justify-content: flex-star; */
-}
-
-.statement {
-  margin-left: 8px;
-  max-width: 395px;
-  max-height: 24px;
-  font-family: Roboto;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  /* justify-content: flex-end; */
 }
 
 .button-form {
