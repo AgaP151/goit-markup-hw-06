@@ -424,6 +424,14 @@
             </li>
           </ul>
         </div>
+        <div class="footer-newsletter">
+          <form>
+            <label for="newsletter" class="footer-inscription">Zapisz się do newslettera</label>
+            <div class="input-send">
+            <input id="newsletter" type="email" placeholder="E-mail" class="newsletter-input form-input">
+            <button type="submit" class="button-main-page ">Zapisz się <svg width="24px" height="24" class="icon-newsletter"><use href="./images/icons.svg#icon-icon-send-1"></use></svg></button></div>
+          </form>
+        </div>
       </div>
     </footer>
   <div class="is-hidden backdrop" data-modal>
@@ -431,8 +439,49 @@
             <button class="close-btn" data-modal-close>
               <svg width="15" height="30">
                 <use href="./images/icons.svg#icon-close-black-18dp-2-1-1"></use>
-              </svg>
-            </button>
+              </svg></button>
+
+              <form name="order-the-service" autocomplete="on" class="form">
+                <h3 class="fill-pd">Zostaw swoje dane w formularzu poniżej</h3>
+                <div class="form-group">
+                
+                  <div class="div-form"> 
+                    <label class="form-name" for="name">Imię</label>   
+                      <input class="input" id="name" type="text" name="name" required/> 
+                      <svg width="14px" height="14px" class="icons-form" ><use href="./images/icons.svg#icon-person-black-18dp-1"></use></svg> 
+                    </div>
+                <div class="div-form">
+                    <label class="form-name" for="phone">Telefon</label>
+                      <input class="input" id="phone" type="tel" name="phone-number"/>
+                      <svg width="13px" height="13px" class="icons-form">
+                        <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+                      </svg>
+                </div>
+                <div class="div-form">
+                  <label class="form-name" for="e-mail">Email</label>
+                    <input class="input" id="e-mail" type="email" name="email"/>
+                    <svg width="15px" height="12px" class="icons-form">
+                    <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+                    </svg>
+                </div>
+                  <label class="form-name" for="comment">Komentarz</label>
+                <textarea id="comment" name="comment" placeholder="Wprowadź tekst" rows="5" class="textarea"></textarea>
+                </div>
+              <div class="label-display">
+                <label class="checkbox" for="checkbox-accept" >
+                  <input class="statute-checkbox" type="checkbox"  name="acceptance" checked="checked" width="16px" height="15px" required/>
+                      <svg class="unchecked-vector" width="16x" height="15px">
+                      <use href="./images/icons.svg#icon-epmty-check"/>
+                    </svg>
+                    <svg class="checkbox-vector" width="16x" height="15px">
+                      <use href="./images/icons.svg#icon-last-vers-icon-check"/>
+                    </svg>
+                  <div class="statement">Oświadczam iż akceptuję<a class="underline-link" href="">Regulamin</a> i 
+                    <a class="underline-link" href="">Politykę Prywatności.</a></div>
+                </label></div>
+                <button type="submit" class="button-form">Wyślij</button></form>
+              </form>
+
           </div></div>
     <script src="./js/modal.js"></script>
   </body>

@@ -47,6 +47,7 @@ body {
   --overlay: #2f303a66;
   --icon-color: #afb1b8;
   --overlay-color: rgba(33, 150, 243, 0.9);
+  --form-color: #757575;
 }
 
 .web-color {
@@ -61,11 +62,6 @@ a {
 address {
   font-style: normal;
 }
-/* 
-a:hover,
-a:focus {
-  color: var(--brand-color-blue);
-} */
 
 button {
   cursor: pointer;
@@ -90,17 +86,6 @@ button:hover {
   box-shadow: 0px 3px 1px var(--button-shadow-hover-first),
     0px 1px 2px var(--button-shadow-hover-second),
     0px 2px 2px var(--img-shadow-first);
-}
-
-.button-main-page {
-  background-color: var(--brand-color-blue);
-  color: var(--white-tekst);
-  font-weight: 700;
-  line-height: 1.875;
-  width: 200px;
-  padding: 10px 0;
-  margin: 30px 500px 200px 500px;
-  letter-spacing: 0.06em;
 }
 
 .contact-navi {
@@ -606,7 +591,7 @@ ul[class='img-display'] > li {
   display: flex;
   margin-right: 10px;
 }
-*/ .footer-links-container {
+.footer-links-container {
   display: flex;
   justify-content: space-between;
   /* flex-direction: row; */
@@ -644,6 +629,72 @@ ul[class='img-display'] > li {
 .footer-icons-element:last-child {
   margin-right: 0;
 }
+.footer-newsletter {
+  /* display: flex; */
+  margin: 72px 0 0 78px;
+}
+.newsletter-input {
+  width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  padding-left: 16px;
+}
+
+.input {
+  fill: inherit;
+  border-radius: 4px;
+  cursor: none;
+  border-color: var(--form-color);
+  transition-property: border-color, fill, cursor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icons-form {
+  top: 32px;
+  left: 15px;
+  fill: inherit;
+
+  /* transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+.input:hover,
+.input:focus {
+  border-color: var(--brand-color-blue);
+  fill: var(--brand-color-blue);
+  cursor: pointer;
+}
+.input-send {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+.footer-inscription {
+  text-transform: uppercase;
+  line-height: 1.1428em;
+  font-size: 14px;
+}
+
+.button-main-page {
+  background-color: var(--brand-color-blue);
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.875;
+  width: 200px;
+  padding: 10px 0;
+  margin: 0 auto;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.icon-newsletter {
+  fill: #fff;
+  margin-left: 24px;
+}
+
 .backdrop {
   display: flex;
   position: fixed;
@@ -757,4 +808,200 @@ ul[class='img-display'] > li {
   background: rgba(47, 48, 58, 0.8);
   align-items: center;
   justify-content: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+.div-form {
+  position: relative;
+}
+
+.form-group input {
+  width: 448px;
+  height: 40px;
+  background-color: inherit;
+  border: 1px solid var(--form-color);
+  /* border-radius: 4px; */
+  padding: 0 0 0 42px;
+  display: block;
+}
+input[type='checkbox'] {
+  background-color: initial;
+  cursor: default;
+  /* border: initial; */
+}
+.form-group textarea {
+  width: 448px;
+  height: 120px;
+  /* background-color: inherit; */
+  border: 1px solid var(--form-color);
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+  display: block;
+}
+.form-group svg {
+  position: absolute;
+}
+form h3 {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  line-height: 23px;
+  margin-bottom: 2px;
+  font-style: 700;
+}
+.fill-pd {
+  color: #212121;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  width: 448px;
+  height: 23px;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 40px; */
+  text-transform: lowercase;
+  margin: auto;
+  /* margin-top: 40px; */
+}
+.fill-pd::first-letter {
+  text-transform: uppercase;
+}
+.form-name {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  width: 24px;
+  height: 14px;
+  color: var(--form-color);
+  margin: 10px 0 4px 0;
+  display: flex;
+}
+
+.input + .icons-form {
+  fill: #212121;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* .input .icons-form:focus{ */
+/* fill: var(--brand-color-blue);
+  } */
+
+.label-display {
+  display: flex;
+  padding-left: 15px;
+  /* justify-content: flex-end; */
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+}
+
+.checkbox {
+  display: flex;
+  margin: 20px 0 30px 0;
+  color: var(--brand-color-grey);
+  align-items: center;
+  position: relative;
+  left: 0;
+  /* padding-left: 10px; */
+  cursor: pointer;
+}
+.checkbox.statute-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  left: 0px;
+}
+.checkbox-vector {
+  position: absolute;
+  fill: #fff;
+  max-width: 16px;
+  border-radius: 2px;
+  visibility: hidden;
+  transition-property: background-color, visibility, scale;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  scale: 0;
+  left: 0px;
+  top: 5px;
+}
+.checkbox a {
+  text-decoration: underline;
+  color: var(--brand-color-blue);
+}
+.unchecked-vector {
+  max-width: 16px;
+  position: absolute;
+  scale: 1;
+  transition: scale, 0.2s;
+  left: 0px;
+}
+
+.statute-checkbox:checked ~ .checkbox-vector {
+  visibility: visible;
+  background-color: var(--brand-color-blue);
+  scale: 1;
+}
+.statute-checkbox:checked ~ .unchecked-vector {
+  scale: 0;
+}
+
+.statute-checkbox {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  z-index: 10;
+  /* left: 0px; */
+  border: 1px solid #000;
+  /* justify-content: flex-star; */
+}
+
+.statement {
+  margin-left: 8px;
+  max-width: 395px;
+  max-height: 24px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  /* justify-content: flex-end; */
+}
+
+.button-form {
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--background-light);
+  background-color: var(--brand-color-blue);
+  font-weight: 500;
+  line-height: 1.625;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transform: scale(1);
+  box-shadow: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-form:focus,
+.button-form:hover {
+  color: var(--white-tekst);
+  box-shadow: 0px 3px 1px var(--button-shadow-hover-first),
+    0px 1px 2px var(--button-shadow-hover-second),
+    0px 2px 2px var(--img-shadow-first);
 }
